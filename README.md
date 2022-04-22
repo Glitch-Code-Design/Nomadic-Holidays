@@ -1,6 +1,6 @@
 I'm a self taught web designer.
 
-A brochure like webpage for a company offering rural holiday getaways.
+This webpage is a brochure style page for rural holidays & getaways.
 
 Always looking to improve, so any feedback would be appreciated!
 
