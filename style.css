@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;0,600;0,700;1,100;1,300;1,400&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-light: #e4dede;
+    --font-dark: #1a1919;
+    --scroll-thumb: #87991e;
+}
+
+.wrapper {
+    margin-bottom: 0;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 100px;
+    cursor: default;
+    scrollbar-width: thin;
+}
+
+.wrapper::-webkit-scrollbar {
+    width: .7vw;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+   background-color: var(--scroll-thumb);
+   border-radius: 5px;
+}
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    z-index: -1;
+    height: 100%;
+}
+
+.background {
+    transform: translateZ(-50px) scale(2);
+}
+
+.foreground {
+    transform: translateZ(-1px) scale(1.5);
+}
+
+.background,
+.foreground {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    
+}
+
+.title {
+    margin-top: 2.8em;
+    font-size: 6rem;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    color: var(--font-light);
+}
+
+.title p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.img-container-1,
+.img-container-2,
+.img-container-3,
+.img-container-4 {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.img-container-1 {
+    min-height: 60vh;
+    background-image: url(./img/section-1.jpg);
+}
+
+.img-container-2 {
+    min-height: 60vh;
+    background-image: url(./img/section-2.jpg);
+}
+
+.img-container-3 {
+    min-height: 60vh;
+    background-image: url(./img/section-3.jpg);
+}
+
+.img-container-4 {
+    min-height: 100vh;
+    background-image: url(./img/section-4.jpg);
+}
+
+.container {
+    letter-spacing: 1px;
+    line-height: 1.2;
+    padding: .5em 0 1em;
+    text-align: center;
+}
+
+.container p, h2 {
+    color: var(--font-dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container h2 {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    padding: .25em 0 .5em;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.container p {
+    font-size: .85rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .title {
+        margin-top: 7em;
+        font-size: 3rem;
+    }
+    .title p {
+        margin-top: .25em;
+        font-size: .85rem;
+    }
+    .img-container-1,
+    .img-container-2,
+    .img-container-3,
+    .img-container-4 {
+        background-attachment: scroll;
+    }
+    .container {
+        padding: .5em .8em .8em;
+    }
+    .container h2 {
+        font-size: .85rem;
+    }
+    .container p {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 820px) {
+    .title {
+        margin-top: 7em;
+        font-size: 4rem;
+    }
+    .title p {
+        margin-top: .25em;
+        font-size: .95rem;
+    }
+    .img-container-1,
+    .img-container-2,
+    .img-container-3,
+    .img-container-4 {
+        background-attachment: scroll;
+    }
+    .container {
+        padding: .5em .8em .8em;
+    }
+    .container h2 {
+        font-size: .9rem;
+    }
+    .container p {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 915px) and (orientation: landscape) {
+    .title {
+        margin-top: 3em;
+        font-size: 3rem;
+    }
+    .title p {
+        margin-top: .5em;
+        font-size: .85rem;
+    }
+    .img-container-1,
+    .img-container-2,
+    .img-container-3,
+    .img-container-4 {
+        background-attachment: scroll;
+    }
+    .container {
+        padding: .5em .8em .8em;
+    }
+    .container h2 {
+        font-size: .85rem;
+    }
+    .container p {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 916px) and (max-width: 1180px) and (orientation: landscape) {
+    .title {
+        margin-top: 4em;
+        font-size: 4rem;
+    }
+    .title p {
+        margin-top: .5em;
+        font-size: .95rem;
+    }
+    .img-container-1,
+    .img-container-2,
+    .img-container-3,
+    .img-container-4 {
+        background-attachment: scroll;
+    }
+    .container {
+        padding: .5em .8em .8em;
+    }
+    .container h2 {
+        font-size: .9rem;
+    }
+    .container p {
+        font-size: .8rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .wrapper {
+        background-color: var(--font-dark);
+    }
+    .container {
+        background-color: var(--font-dark);
+    }
+    .container p, h2 {
+        color: var(--font-light);
+    }
+}
